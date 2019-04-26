@@ -1,0 +1,12 @@
+package com.I.LoveU.mapper;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
+
+
+@Mapper
+public interface ScoreMapper {
+    public List getScore();
+
+}
