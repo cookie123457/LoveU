@@ -6,11 +6,17 @@
         <result column="id" property="id"/>
         <result column="photoname" property="photoname"/>
         <result column="username" property="username"/>
-
-
     </resultMap>
 
     <select id="getPhoto" resultMap="seeAll">
-        SELECT * from score
+        SELECT * from photo
+    </select>
+
+    <resultMap id="src" type="com.I.LoveU.po.Photo">
+        <result column="photoname" property="photoname"/>
+    </resultMap>
+
+    <select id="countPhoto" resultMap="src">
+        select photoname from photo
     </select>
 </mapper>
