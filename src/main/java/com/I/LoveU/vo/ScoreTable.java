@@ -19,11 +19,21 @@ public class ScoreTable {
 
     public ScoreTable(){}
 
-    public ScoreTable(String username,int score){
+    public ScoreTable(String userid,String username,int score){
+        this.userid=userid;
         this.username=username;
         this.score=score;
     }
 
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
+
+    private String userid;
     private String username;
     private int score;
 }

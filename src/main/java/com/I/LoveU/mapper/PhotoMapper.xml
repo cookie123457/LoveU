@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mappper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.I.LoveU.mapper.ScoreMapper">
-    <resultMap id="seeAll" type="com.I.LoveU.po.Score">
-        <result column="userid" property="userid"/>
+<mapper namespace="com.I.LoveU.mapper.PhotoMapper">
+    <resultMap id="seeAll" type="com.I.LoveU.po.Photo">
+        <result column="id" property="id"/>
+        <result column="photoname" property="photoname"/>
         <result column="username" property="username"/>
-        <result column="score" property="score"/>
+
 
     </resultMap>
 
-    <select id="getScore" resultMap="seeAll">
+    <select id="getPhoto" resultMap="seeAll">
         SELECT * from score
     </select>
-
 </mapper>
