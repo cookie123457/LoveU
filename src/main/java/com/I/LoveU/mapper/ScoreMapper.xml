@@ -10,7 +10,6 @@
     </resultMap>
 
     <select id="getScore" resultMap="seeAll">
-        SELECT * from score
     </select>
 
 </mapper>

@@ -2,21 +2,24 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mappper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.I.LoveU.mapper.PhotoMapper">
-    <resultMap id="seeAll" type="com.I.LoveU.po.Photo">
+    <resultMap id="seeAll" type="com.I.LoveU.vo.PhotoTable">
         <result column="id" property="id"/>
-        <result column="photoname" property="photoname"/>
+        <result column="userid" property="userid"/>
         <result column="username" property="username"/>
+        <result column="updatetime" property="updatetime"/>
+        <result column="score" property="score"/>
     </resultMap>
 
     <select id="getPhoto" resultMap="seeAll">
-        SELECT * from photo
+        select * from photo
     </select>
 
     <resultMap id="src" type="com.I.LoveU.po.Photo">
-        <result column="photoname" property="photoname"/>
+        <result column="userid" property="userid"/>
+        <result column="username" property="username"/>
     </resultMap>
 
     <select id="countPhoto" resultMap="src">
-        select photoname from photo
+        select userid,username from photo
     </select>
 </mapper>

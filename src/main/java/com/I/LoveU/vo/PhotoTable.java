@@ -1,6 +1,11 @@
 package com.I.LoveU.vo;
 
+import java.util.Date;
+
 public class PhotoTable {
+
+    private int id ;
+
     public int getId() {
         return id;
     }
@@ -9,12 +14,12 @@ public class PhotoTable {
         this.id = id;
     }
 
-    public String getPhotoname() {
-        return photoname;
+    public String getUserid() {
+        return userid;
     }
 
-    public void setPhotoname(String photoname) {
-        this.photoname = photoname;
+    public void setUserid(String userid) {
+        this.userid = userid;
     }
 
     public String getUsername() {
@@ -25,16 +30,35 @@ public class PhotoTable {
         this.username = username;
     }
 
-    private int id ;
-    private String photoname;
+    public Date getUpdatetime() {
+        return updatetime;
+    }
+
+    public void setUpdatetime(Date updatetime) {
+        this.updatetime = updatetime;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    private String userid;
     private String username;
+    private Date updatetime;
+    private int score;
+
 
     public PhotoTable(){}
 
-    public PhotoTable(int id,String photoname,String username){
+    public PhotoTable(int id,String userid,String username,Date updatetime,int score){
         this.id=id;
-        this.photoname=photoname;
+        this.userid=userid;
         this.username=username;
-
+        this.updatetime=updatetime;
+        this.score=score;
     }
 }
